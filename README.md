@@ -146,6 +146,12 @@ filter odd?
 ```
 <br />
 
+[29. Get the Caps](http://www.4clojure.com/problem/29)
+```clojure
+#(apply str (re-seq #"[A-Z]" %))
+```
+<br />
+
 [35. Local Bindings](http://www.4clojure.com/problem/35)
 ```clojure
 7
@@ -169,6 +175,13 @@ filter odd?
 #(last (sort %&))
 ```
 <br />
+
+[42. Factorial Fun](http://www.4clojure.com/problem/42)
+```clojure
+#(reduce * (range 1 (inc %)))
+```
+<br />
+
 
 [48. Intro to some](http://www.4clojure.com/problem/48)
 ```clojure
