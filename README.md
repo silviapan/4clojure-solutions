@@ -134,6 +134,12 @@ true
 ```
 <br />
 
+[23. Reverse a Sequence](http://www.4clojure.com/problem/23)
+```clojure
+#(reduce conj () %)
+```
+<br />
+
 [24. Sum It All Up](http://www.4clojure.com/problem/24)
 ```clojure
 reduce +
@@ -146,9 +152,33 @@ filter odd?
 ```
 <br />
 
+[27. Palindrome Detector](http://www.4clojure.com/problem/27)
+```clojure
+#(= (seq %) (reverse %))
+```
+<br />
+
 [29. Get the Caps](http://www.4clojure.com/problem/29)
 ```clojure
 #(apply str (re-seq #"[A-Z]" %))
+```
+<br />
+
+[30. Compress a Sequence](http://www.4clojure.com/problem/30)
+```clojure
+#(map first (partition-by identity %))
+```
+<br />
+
+[32. Duplicate a Sequence](http://www.4clojure.com/problem/32)
+```clojure
+#(interleave % %)
+```
+<br />
+
+[34. Implement range](http://www.4clojure.com/problem/34)
+```clojure
+#(take (- %2 %1) (iterate inc %1))
 ```
 <br />
 
@@ -182,6 +212,17 @@ filter odd?
 ```
 <br />
 
+[45. Intro to Iterate](http://www.4clojure.com/problem/45)
+```clojure
+'(1 4 7 10 13)
+```
+<br />
+
+[47. Contain Yourself](http://www.4clojure.com/problem/47)
+```clojure
+4
+```
+<br />
 
 [48. Intro to some](http://www.4clojure.com/problem/48)
 ```clojure
@@ -213,6 +254,18 @@ filter odd?
 ```
 <br />
 
+[71. Rearranging Code: ->](http://www.4clojure.com/problem/71)
+```clojure
+last
+```
+<br />
+
+[72. Rearranging Code: ->>](http://www.4clojure.com/problem/72)
+```clojure
+reduce +
+```
+<br />
+
 [134. A nil key](http://www.4clojure.com/problem/134)
 ```clojure
 (fn [k m]
@@ -228,6 +281,12 @@ filter odd?
 ```
 <br />
 
+[156. Map Defaults](http://www.4clojure.com/problem/156)
+```clojure
+#(zipmap %2 (repeat %1))
+```
+<br />
+
 [161. Subset and Superset](http://www.4clojure.com/problem/161)
 ```clojure
 #{1 2}
@@ -239,21 +298,3 @@ filter odd?
 1
 ```
 <br />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
