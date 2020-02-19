@@ -170,9 +170,22 @@ filter odd?
 ```
 <br />
 
+[31. Pack a Sequence](http://www.4clojure.com/problem/31)
+```clojure
+partition-by identity
+```
+<br />
+
 [32. Duplicate a Sequence](http://www.4clojure.com/problem/32)
 ```clojure
 #(interleave % %)
+```
+<br />
+
+[33. Replicate a Sequence](http://www.4clojure.com/problem/33)
+```clojure
+#(mapcat (fn [x] (repeat %2 x)) %1)
+
 ```
 <br />
 
@@ -227,6 +240,12 @@ filter odd?
 [48. Intro to some](http://www.4clojure.com/problem/48)
 ```clojure
 6
+```
+<br />
+
+[51. Advanced Destructuring](http://www.4clojure.com/problem/51)
+```clojure
+[1 2 3 4 5]
 ```
 <br />
 
