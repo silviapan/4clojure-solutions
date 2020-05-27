@@ -219,6 +219,12 @@ partition-by identity
 ```
 <br />
 
+[39. Interleave Two Seqs](http://www.4clojure.com/problem/39)
+```clojure
+#(flatten (map list %1 %2))
+```
+<br />
+
 [42. Factorial Fun](http://www.4clojure.com/problem/42)
 ```clojure
 #(reduce * (range 1 (inc %)))
@@ -243,6 +249,12 @@ partition-by identity
 ```
 <br />
 
+[49. Split a sequence](http://www.4clojure.com/problem/49)
+```clojure
+#(vector (subvec %2 0 %1) (subvec %2 %1))
+```
+<br />
+
 [51. Advanced Destructuring](http://www.4clojure.com/problem/51)
 ```clojure
 [1 2 3 4 5]
@@ -258,6 +270,12 @@ partition-by identity
 [57. Simple Recursion](http://www.4clojure.com/problem/57)
 ```clojure
 '(5 4 3 2 1)
+```
+<br />
+
+[61. Map Construction](http://www.4clojure.com/problem/61)
+```clojure
+#(apply hash-map (interleave %1 %2))
 ```
 <br />
 
@@ -285,12 +303,38 @@ reduce +
 ```
 <br />
 
+[83. A Half-Truth](http://www.4clojure.com/problem/83)
+```clojure
+(fn [& bools]
+  (let [true-count (get (frequencies bools) true 0)
+        total-count (count bools)]
+    (and (> true-count 0) (< true-count total-count))))
+```
+<br />
+
+[99. Product Digits](http://www.4clojure.com/problem/99)
+```clojure
+(fn [x y]
+  (->> (* x y) 
+       str
+       (map (comp read-string str))))
+```
+<br />
+
 [134. A nil key](http://www.4clojure.com/problem/134)
 ```clojure
 (fn [k m]
   (if (contains? m k)
     (= (m k) nil)
     false))
+```
+<br />
+
+[143. dot product](http://www.4clojure.com/problem/143)
+```clojure
+(fn [x y]
+  (->> (map * x y)
+       (reduce +)))
 ```
 <br />
 
