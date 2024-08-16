@@ -1,5 +1,5 @@
 # 4clojure-solutions
-Solutions for problems on 4clojure (http://www.4clojure.com/)
+Solutions for problems on 4clojure (https://4clojure.oxal.org/)
 
 [1. Nothing but the Truth](http://www.4clojure.com/problem/1)
 ```clojure
